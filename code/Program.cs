@@ -1,21 +1,12 @@
 ﻿// Написать программу, которая из имеющегося массива строк формирует массив из строк,длинна которых <= 3 символам
 
 
-string[]array = {"dog","water","cat","123" , "586" , "11" ,"world"};
+string[] array = { "dog", "water", "cat", "123", "586", "11", "world" };
+string[] newArray = new string[array.Length];
 
 for (int i = 0; i < array.Length; i++)
 {
-    Console.Write(array[i]+" ");
+    if (array[i].Length <= 3)
+        newArray[i] = array[i];
+    Console.Write(newArray[i] + " ");
 }
-Console.WriteLine();
-   
-string[]newArray = array;
-
-for (int j = 0; j < newArray.Length; j++)
-{
-    if (newArray[j].Length <= 3) 
-
-        Console.Write(newArray[j]+" ");
-
-}
-
